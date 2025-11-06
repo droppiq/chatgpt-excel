@@ -1,5 +1,5 @@
 # ChatGPT for Excel
-ChatGPT for Excel using VBA, for those that have an older version of Excel or when Copilot is disabled, e.g. through company policy.
+ChatGPT for Excel using VBA, bringing the power of AI to any version of Excel.
 
 ## Usage
 Formula requires a `prompt`, `model`, `reasoning-level`, and `api-key`:
@@ -15,8 +15,6 @@ Paste the following code in a cell in Excel to get a response:
 
 The result will be similar to:
 >The Eiffel Tower in Paris is about 330 meters (1,083 feet) tall, including its antennas. The original height when it was completed in 1889 was 300 meters, but antennas added later increased it.
->
->Do you want a breakdown by levels too?
 
 *Note: OpenAI can take a few seconds (per query) to return a response. To get a different response, tune the prompt.*
 
