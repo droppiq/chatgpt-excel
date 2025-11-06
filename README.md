@@ -16,7 +16,7 @@ Paste the following code in a cell in Excel to get a response:
 The result will be similar to:
 >The Eiffel Tower in Paris is about 330 meters (1,083 feet) tall, including its antennas. The original height when it was completed in 1889 was 300 meters, but antennas added later increased it.
 
-*Note: OpenAI can take a few seconds (per query) to return a response. To get a different response, tune the prompt.*
+*Note: OpenAI can take a few seconds (per query) to return a response. To get a different response, tune the prompt, change the model, or adjust the reasoning level.*
 
 ### Example with cell reference
 The prompt, model, reasoning, and api-key can also be located in an Excel cell, e.g. cell `A1` holds the prompt, cell `B1` the model, `C1` the reasoning level, and `D1` the OpenAI api-key. To get a response, paste the following in cell `E1`:
