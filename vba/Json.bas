@@ -1,3 +1,4 @@
+Attribute VB_Name = "Json"
 Option Explicit
 
 ' Author: Michele Locati <michele@locati.it>
@@ -120,4 +121,3 @@ Private Function ParseObject(ByRef jsEngine As Object, ByRef rawObject As Object
     End Select
     Set ParseObject = result
 End Function
-
