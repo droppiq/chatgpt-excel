@@ -36,10 +36,10 @@ It is possible to set the reasoning level for the model to `low`, `medium`, or `
 
 For more information see: [OpenAi reasoning](https://platform.openai.com/docs/guides/reasoning)
 
-## Word of caution
+### Word of caution
 It is **strongly** advised that after a response has been generated to **hard paste** the value. Failing to do so will re-query the OpenAI-api on *each and every*  change in the Excel, both temporarily freezing Excel until the response is returned and costing money for each api-request. To hard paste a value there a two easy options:
 
-1: `ctrl` `c` 🠆 `ctrl` `alt` `v` 🠆 under paste, select `values`
+1: `ctrl`+`c` 🠆 `ctrl`+`alt`+`v` 🠆 under paste, select `values`
 
 2: copy 🠆 right mouse click, under paste select `values`
 
@@ -55,11 +55,13 @@ Otherwise, login and go to https://platform.openai.com/api-keys to create a key.
 Easiest option. The Excel contains the "Example with cell reference" from above. Modify the Excel to your needs.
 
 ### Option 2: download VBA files and install 
-1. Save the `OpenAi.bas`, `Json.bas`, and `JsonData.cls` files somewhere in your PC
-2. Open the Visual Basic Editor
-3. Choose the File > Import File... menu item
-4. Import all **three** files
-5. You can delete the downloaded files
+1. Download all three files (`OpenAi.bas`, `Json.bas`, and `JsonData.cls`) in the `vba`-folder of the repo
+2. Open the Visual Basic Editor (`alt`+`F11`) in Excel
+3. In the menu (top left) choose  `File` 🠆 `Import File...`
+4. Import <ins>all three</ins> files
+5. Follow one of the examples to test if everything works
+
+*Note: you can delete the downloaded files as Excel does not require them anymore.* 
 
 
 
