@@ -19,12 +19,12 @@ The result will be similar to:
 *Note: OpenAI can take a few seconds (per query) to return a response. To get a different response, tune the prompt.*
 
 ### Example with cell reference
-The prompt, model, reasoning, and api-key can also be located in an Excel cell, e.g. cell `A1` holds the prompt, cell `D1` the model, `E1` the reasoning level, and `F1` the OpenAI api-key. To get a response, paste the following in cell `B1`:
+The prompt, model, reasoning, and api-key can also be located in an Excel cell, e.g. cell `A1` holds the prompt, cell `B1` the model, `C1` the reasoning level, and `D1` the OpenAI api-key. To get a response, paste the following in cell `E1`:
 ```excel
-=ChatGPT(A1, $D$1, $E$1, $F$1)
+=ChatGPT(A1, B1, C1, D1)
 ```
 
-*Note the `$` signs in `D1`, `E1`, and `F1` to keep the reference locked if you drag the code down to query the prompts in e.g. cells `A2` to `A10`*
+
 
 ### Model selection (and price per 1M tokens)
 Available models and their associated costs can be found on: [OpenAi pricing](https://platform.openai.com/docs/pricing)
@@ -50,7 +50,7 @@ Otherwise, login and go to https://platform.openai.com/api-keys to create a key.
 *Note: without a valid `api-key` the function will return an error.*
 
 ### Option 1: download macro-enabled example Excel
-Easiest option. The Excel contains the "Example with cell reference" from above. Modify the Excel to your needs.
+Easiest option. The Excel is similar to the "Example with cell reference" from above. Modify the Excel to your needs.
 
 ### Option 2: download VBA files and install 
 1. Download all three files (`OpenAi.bas`, `Json.bas`, and `JsonData.cls`) in the `vba`-folder of the repo
@@ -59,7 +59,7 @@ Easiest option. The Excel contains the "Example with cell reference" from above.
 4. Import <ins>all three</ins> files
 5. Follow one of the examples to test if everything works
 
-*Note: you can delete the downloaded files as Excel does not require them anymore.* 
+*Note: you can delete the downloaded files after importing as they are no longer required by Excel.* 
 
 
 
