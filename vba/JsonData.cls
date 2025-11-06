@@ -7,7 +7,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-Option Compare Database
+' Option Compare Database
 Option Explicit
 
 ' Author: Michele Locati <michele@locati.it>
@@ -246,3 +246,4 @@ Private Function StringToJSON(ByVal str As String) As String
     Next
     StringToJSON = StringToJSON & """"
 End Function
+
