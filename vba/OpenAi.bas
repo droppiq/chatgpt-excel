@@ -1,6 +1,10 @@
 Attribute VB_Name = "OpenAi"
 Option Explicit
 
+' Author: Wouter Grimme <coding@woutergrimme.nl>
+' Source: https://github.com/DroppiQ/chatgpt-excel
+' License: GNU AGPLv3
+
 Function ChatGpt(prompt As String, model As String, effort As String, apiKey As String) As String
     Dim http As Object
     Dim jsonRequest As String
