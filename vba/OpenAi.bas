@@ -2,7 +2,7 @@ Attribute VB_Name = "OpenAi"
 Option Explicit
 
 ' Author: Wouter Grimme <coding@woutergrimme.nl>
-' Source: https://github.com/DroppiQ/chatgpt-excel
+' Source: https://github.com/droppiq/chatgpt-excel
 ' License: GNU AGPLv3
 
 Function CHATGPT(prompt As String, model As String, effort As String, apiKey As String) As String
@@ -13,13 +13,18 @@ Function CHATGPT(prompt As String, model As String, effort As String, apiKey As 
 
     On Error GoTo ErrHandler
 
-    ' Create HTTP request
+    ' Build JSON request
+    jsonRequest = _
+        "{" & _
+            """model"": """ & model & """," & _
+            """reasoning"": {" & _
+                """effort"": """ & effort & """" & _
+            "}," & _
+            """input"": """ & Replace(prompt, """", "\""") & """" & _
+        "}"
+
+    ' Send HTTP request
     Set http = CreateObject("MSXML2.XMLHTTP")
-
-    ' Build JSON request body
-    jsonRequest = "{""model"":""" & model & """,""reasoning"":{""effort"":""" & effort & """},""input"":""" & Replace(prompt, """", "\""") & """}"
-
-    ' Send request
     http.Open "POST", "https://api.openai.com/v1/responses", False
     http.setRequestHeader "Content-Type", "application/json"
     http.setRequestHeader "Authorization", "Bearer " & apiKey
@@ -31,11 +36,10 @@ Function CHATGPT(prompt As String, model As String, effort As String, apiKey As 
         Exit Function
     End If
 
-
-    ' Read the response
+    ' Get the response
     jsonResponse = http.responseText
     
-    ' Parse json
+    ' Parse JSON response
     Set data = ParseJSON(jsonResponse)
     
     ' Throw error if json is not valid
